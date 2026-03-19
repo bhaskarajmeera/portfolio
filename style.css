@@ -1,0 +1,9 @@
+*{
+    margin: 0;
+}
+.wrapper{
+    background:rgb(69, 227, 227);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
