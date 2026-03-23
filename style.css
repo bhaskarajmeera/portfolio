@@ -1,9 +1,198 @@
-*{
+body {
     margin: 0;
 }
-.wrapper{
-    background:rgb(69, 227, 227);
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
+:root{
+
+--color-orange:orangered;
+--color-dark:black;
+
+--body-bg:rgb(101, 236, 236);
+--text-color:var(--color-dark);
+--border-color:va(--color-dark);
+
+--dark-bg:var(--color-dark);
+--dark-text-color:white;
+--dark-border-color:white;
+
+
+--shadow:4px -2px 40px 9px rgba(128, 128, 128, 0.783);
+
+
 }
+html{
+    scroll-behavior: smooth;
+}
+*{
+    box-sizing: border-box;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    max-width: 1400px;
+}
+.flex {
+    display: flex;
+    gap: 1rem;
+}
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid{
+    display: grid;
+    gap: 1rem;
+
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.wrapper {
+    background: var(--body-bg);
+
+    justify-content: center;
+    align-items: center;
+    
+    min-height: 100vh;
+    
+    
+}
+        /* ----dark mode---*/
+[for="darkMode"]{
+    position: fixed;
+    top:7rem;
+    left:3rem;
+
+}
+[for="darkMode"]:hover{
+    cursor:pointer;
+    transform: scale(1.3);
+    transition: all 0.3s;
+}
+        /*------nav bar -----*/
+        header{
+            display: flex;
+            padding:1rem;
+            box-shadow:4px -2px 40px 9px rgba(128, 128, 128, 0.783);
+            position:sticky;
+            top:1px;
+            background:rgb(101, 236, 236)
+            
+
+        }
+   header.name{
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+                    }
+        .logo {
+            font-size: 1.3rem;
+            position:relative;
+        }
+        .logo:first-child {
+            font-weight: bold;
+            margin-right: 1rem;
+            font-family: "Averia Gruesa Libre", system-ui;
+
+            font-weight: 400;
+          font-style: normal;
+
+        }
+        .line::before{
+            content: " ";
+            background:var(--color-orange);
+            width: 4px;
+            height: 100%;
+            position: absolute;
+            left:35%;
+        }
+        .navigation{
+            list-style: none;
+            font-weight: bold;
+
+        }
+        .navigation li:hover{
+            color: var(--color-orange);
+            transition:all 0.3s;
+
+        }
+#darkMode:checked + .wrapper {
+    --body-bg:var(--dark-bg);
+   color:var(--dark-text-color);
+   --border-color:var(--dark-border-color);
+}
+
+#darkMode {
+    display: none;
+}
+       /* <!-- hero  --> */
+.hero-section{
+    margin-top: 3rem;
+    max-height: 50vh;
+
+
+}
+.hero{
+    background:var(--color-orange);
+    grid-template-areas: "left right";
+    padding: 2rem;
+    box-shadow: var(--shadow);
+
+}
+
+.left{
+    grid-area: left;
+    flex-direction: column;
+    
+    justify-content: center;
+    margin-left: 10vw;
+}
+.right{
+    grid-area: right;
+    justify-content: flex-end;
+    align-items: left;
+    margin-top: auto;
+
+}
+.right img{
+    width:100%;
+    height: 115%;
+}
+.left div span{
+    font-weight: bold;
+    font-size: 1.3rem;
+
+}
+.left .tag{
+    font-size: 2.2rem;
+    font-weight: bolder;
+    letter-spacing: 5px;
+
+}
+.left button{
+    background: var(--body-bg);
+    color: var(--text-color);
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+
+
+}
+
+       /* <!-- banner -->*/
+.banner{
+    margin-top: 7rem;
+    border:2px solid var(--border-color);
+
+
+}
+        /*<!-- skills -->*/
+
+        /*<!-- projects -->*/
+
+        /*<!-- about me -->*/
+
+        /*<!-- contact us -->*/
