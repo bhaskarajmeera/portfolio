@@ -1,9 +1,10 @@
 body {
     margin: 0;
+    border-radius: 1rem;
 }
 :root{
 
---color-orange:orangered;
+--color-orange:#d37553;
 --color-dark:black;
 
 --body-bg:rgb(101, 236, 236);
@@ -13,7 +14,6 @@ body {
 --dark-bg:var(--color-dark);
 --dark-text-color:white;
 --dark-border-color:white;
-
 
 --shadow:4px -2px 40px 9px rgba(128, 128, 128, 0.783);
 
@@ -42,6 +42,7 @@ html{
 .grid{
     display: grid;
     gap: 1rem;
+    
 
 }
 a {
@@ -65,16 +66,13 @@ margin-bottom: 3rem;
 
     justify-content: center;
     align-items: center;
-    
     min-height: 100vh;
-    
-    
 }
         /* ----dark mode---*/
 [for="darkMode"]{
     position: fixed;
-    top:7rem;
-    left:3rem;
+    top:10rem;
+    left:5rem;
 
 }
 [for="darkMode"]:hover{
@@ -130,25 +128,26 @@ margin-bottom: 3rem;
         }
 #darkMode:checked + .wrapper {
     --body-bg:var(--dark-bg);
-   color:var(--dark-text-color);
-   --border-color:var(--dark-border-color);
+   color: var(--dark-text-color);
+   
 }
-
 #darkMode {
     display: none;
 }
        /* <!-- hero  --> */
 .hero-section{
     margin-top: 3rem;
-    max-height: 50vh;
+    max-height: 80vh;
 
 
 }
 .hero{
     background:var(--color-orange);
     grid-template-areas: "left right";
-    padding: 2rem;
+    padding: 5rem;
     box-shadow: var(--shadow);
+    border-radius: 1rem;
+    
 
 }
 
@@ -158,6 +157,7 @@ margin-bottom: 3rem;
     
     justify-content: center;
     margin-left: 10vw;
+    padding-top:10px;
 }
 .right{
     grid-area: right;
@@ -167,8 +167,9 @@ margin-bottom: 3rem;
 
 }
 .right img{
-    width:100%;
-    height: 115%;
+    width:"100";
+    height: "80%";
+    padding-bottom: 2rem;
 }
 .left div span{
     font-weight: bold;
@@ -182,15 +183,13 @@ margin-bottom: 3rem;
 
 }
 .left button{
-    background: var(--body-bg);
-    color: var(--text-color);
+    background: var(--color-dark);
+    color: white;
     padding: 0.8rem 2rem;
+
     border: none;
     border-radius: 10px;
     cursor: pointer;
-
-
-
 }
 
        /* <!-- banner -->*/
@@ -198,7 +197,7 @@ margin-bottom: 3rem;
     margin-top: 7rem;
     border:2px solid var(--border-color);
     box-shadow: var(--shadow);
-    padding: 2rem;
+    padding: 5rem;
     border-radius: 50px;
     justify-content: space-between;
     flex-wrap:wrap;
@@ -210,6 +209,8 @@ margin-bottom: 3rem;
     height: 4rem;
     border-radius: 50%;
     font-size: 2rem;
+    padding-top: 2rem;
+
 
 
 }
@@ -217,6 +218,8 @@ margin-bottom: 3rem;
         background: grey;
         width: 2px;
         height:70px;
+        padding-top: 2rem;
+
 
     }
 
@@ -233,8 +236,8 @@ margin-bottom: 3rem;
 
 /*<!-- skills -->*/
 .skills {
-margin-top: 3rem;
-padding: 3rem;
+margin-top: 10rem;
+padding: 10em;
 
 
 
@@ -257,18 +260,24 @@ padding: 3rem;
 }
         /*<!-- projects -->*/
        .projects{
-        margin-top: 5rem;
-
+        margin-top: 1rem;
+       
        }
        .projects .project-container{
         grid-template-columns: repeat(2, 1fr);
 
        }
-       
       .projects .project-card{
         box-shadow: var(--shadow);
         border-radius: 5px;
         padding-bottom: 3rem;
+        
+        image-rendering: auto;
+      }
+      .project-card .top img{
+        justify-content: center;
+        max-width: 100%;
+        height: auto;
       }
        .project-card .links{
         display: flex;
@@ -279,14 +288,94 @@ padding: 3rem;
        }
 
         /*<!-- about me -->*/
+.about{
+margin-top:5rem;
+background: rgb(196, 238, 91);
+padding: 7rem;
 
-        /*<!-- contact us -->*/
+}
+.about .myImg {
+    width: 40%;
+
+}
+.my-bio h2{
+    letter-spacing: 5px;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+.about .my-bio p:nth-child(3),.my-bio .tag{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.my-bio .tag+div>span{
+    padding: 1rem,1.2rem;
+    border-radius: 5px;
+    
+}
+.my-bio .tag+div>span:hover{
+background: grey;
+cursor: pointer;
+transform: scale(1.3);
+transition: all 0.5s;
+}
+
+      /*<!-- contact us -->*/
+
+      .contact{
+        padding-top: 7rem,0;
+        margin-top: 5rem;
+        width: 400px;
+        margin: auto;
+      }
         /* footer*/
-        footer{
-            margin-bottom: 4rem;
+       
+        .social{
+            font-size: 4rem;
+            justify-content: space-between;
+
+        }
+        .contact h3{
+            text-align: center;
+            pad: 3rem,0;
+
+        }
+        .contact .email-section{
+            background: black;
+            color:white;
+            padding: 2rem,1rem;
+            border-radius: 30px;
+            font-size: 2rem;
+            gap:3rem;
+            box-shadow: var(--shadow)
+
+        }
+        .contact .email-section span{
+            font-size: 1.3rem;
+        }
+        .contact .email-icon {
+            background: var(--color-orange);
+            width: 5rem;
+            height: 5rem;
+            border-radius:40%;
+            
+
+        }
+
+         footer{
+            margin-bottom: 1rem;
             text-align: center;
             background: var(--color-orange);
             font-size: medium;
            padding: 3rem;
             border-radius: 1rem;
+            
         }
+        footer .top{
+            display: flex;
+            margin-bottom: 1rem;
+
+        }
+        footer .top ul{
+            list-style: none;
+        }
+       
