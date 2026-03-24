@@ -344,7 +344,7 @@ transition: all 0.5s;
         }
         .contact h3{
             text-align: center;
-            pad: 3rem,0;
+            pad: 2rem,0;
 
         }
         .contact .email-section{
@@ -375,7 +375,7 @@ transition: all 0.5s;
             text-align: center;
             background: var(--color-orange);
             font-size: medium;
-           padding: 3rem;
+           padding: 1rem;
             border-radius: 1rem;
             
         }
